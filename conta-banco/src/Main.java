@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Digite o numero da agencia");
         int numeroAgencia = scan.nextInt();
 
-        if (numeroAgencia == 1032){
+        if (numeroAgencia == 1031){
             System.out.println("Olá "+ conta1031.getNomeCliente() + " obrigado por criar uma conta em nosso banco,\n" +
                     "sua agência é "+conta1031.getAgencia()+ ", conta: " + conta1031.getNumeroConta()+ " e seu saldo de " + conta1031.getSaldo()+"\n" +
                             "já está disponível para saque.");
