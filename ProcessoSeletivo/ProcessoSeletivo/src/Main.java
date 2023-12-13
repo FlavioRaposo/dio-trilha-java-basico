@@ -4,12 +4,13 @@ import java.util.Random;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Processo Seletivo");
-        analisarCandidato(1900.0);
-        imprimirSelecionados();
+        String[] candidatos = {"Felipe", "Marcia", "Julia", "Augusto", "Paulo"};
+        for (String candidato: candidatos){
+            entrandoEmContato(candidato);
         }
+    }
+
+
         static void entrandoEmContato(String candidato){
             int tentativasRealizadas = 1;
             boolean continuarTentando = true;
@@ -22,12 +23,15 @@ public class Main {
                 }else{
                     System.out.println("contato realizado com sucesso");
                 }
-            }while(continuarTentando && tentativasRealizadas< 3){
-                if (atendeu){
-                    System.out.println("");
+            }while(continuarTentando && tentativasRealizadas< 3);
+                if (atendeu) {
+                    System.out.println("Conseguimos contato " + candidato + " na " + tentativasRealizadas + " tentativas");
+                } else {
+                    System.out.println("Não conseguimos contato com o " + candidato + " numero maximo de tentativas " + tentativasRealizadas + " realizadas");
                 }
+
             }
-        }
+
     //metodo auxiliar
         static boolean atender(){
             return new Random().nextInt(3)==1;
